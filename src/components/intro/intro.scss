@@ -1,0 +1,172 @@
+@import "../../global.scss";
+
+.intros{
+ 
+    display: flex;
+    text-shadow: 2px 2px black;
+    overflow: hidden;
+    @include mobile{
+        flex-direction: column;
+        align-items: center;
+    }
+    .left{
+        flex:0.4;
+        overflow: hidden;
+      
+        .imgC{
+
+            width: 400px;
+            height: 400px;
+            background-image: linear-gradient(to bottom right, rgb(66, 22, 178), rgb(67, 175, 197));
+            
+            border-top-left-radius: 50%;
+            border-top-right-radius: 50% ;
+            border-bottom-left-radius: 50%;
+            border-bottom-right-radius: 0%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            float: left;
+ 
+           
+            @include mobile{
+                align-items: start;
+            }
+           
+            img{
+                height:100%;
+                
+                
+              @include mobile{
+                  height: 50%;
+              }
+            }
+
+
+       }
+
+    }
+    .right{
+        flex:1;
+        position: relative;
+        display: flex;
+        text-align: justify;
+        justify-content: center;
+        overflow: hidden;
+        .wrapper{
+            margin: 30px;
+            width: 100%;
+            height: 100%;
+            padding-left: 25px;
+            display: flex-end;
+           
+          
+             @include mobile{
+                 padding-left: 0;
+                 align-items: center;     
+
+             }
+
+             button{
+                margin: 50px;
+                display: flex;
+                align-items: center;
+                width: 150px;
+                height: 30px;
+                font-size: 15px;
+                text-align: center;
+                color: white;
+                background-color: crimson;
+                border: none;
+                border-radius: 10px;
+                font-weight: 500;
+                cursor: pointer;
+                box-shadow: 0 2px 2px rgb(227, 49, 85) ;
+                
+                &:hover{
+                background-color: white;
+                color: black;
+                }
+                &:focus{
+                    outline: none;
+                }
+            }
+            h1{
+                color: white;
+                font-size: 60px;
+                margin:10px;
+                font-family:'Courier New', Courier, monospace;
+
+                @include mobile{
+                    font-size: 40px;
+                   
+                }
+            }
+            h2{
+             margin: 10px;
+             color: rgb(248, 41, 41);
+             font-family:'Courier New', Courier, monospace;
+             font-size: 30px;  
+             
+            }
+          
+        } 
+        h3{
+            font-family:'Courier New', Courier, monospace;
+             font-size: 34px;
+              margin: 10px;
+                color: white;
+              
+            
+                @include mobile{
+                    font-size: 20px;
+                }
+                .Typewriter{
+                    font-family:'Courier New', Courier, monospace;
+                    font-size: inherit;
+                    margin: 10px;
+                    color: rgb(225, 51, 51);
+                    display:inline;
+                }
+                
+            }
+            
+
+            h4{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: rgb(250, 250, 250);
+                text-shadow: 3px 3px rgb(24, 12, 12);
+                font-size: 25px;  
+                margin: 20px;
+                font-family: 'Courier New', Courier, monospace;
+                @include mobile{
+                    font-size: 15px;
+                }
+              
+            }
+          
+        button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        a{
+            position: absolute;
+            bottom: 10px;
+            left:40%;
+            img{
+                width: 30px;
+                animation: arrowBlink 1s infinite;
+            }
+            @keyframes arrowBlink {
+                100%{
+                    opacity:0;
+                }
+                
+            }
+        }
+    }
+
+}

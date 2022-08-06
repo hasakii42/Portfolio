@@ -1,0 +1,142 @@
+@import "../../global.scss";
+
+.contact{
+    
+        font-size:50px;
+        
+        display: flex;
+
+    @include mobile {
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+
+     }
+
+     .itemC{
+        display: none;
+        
+        @include mobile{
+            display: flex;
+            align-items: center;
+        flex-direction: column;
+        font-family:'Courier New', Courier, monospace;
+        margin-left:20px;
+        color: white;
+            margin: 5px;
+            margin-left: 350px;
+        }
+     }
+    .left{
+        flex: 1;
+        overflow: hidden;
+
+        img{
+            height: 100%;
+
+            @include mobile{
+                height: 80%;
+            }
+        }
+    }
+    .right{
+        flex:1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @include mobile{
+            height: 100%;
+            width: 100%;
+        }
+
+        h2{
+            font-family:'Courier New', Courier, monospace;
+            font-size: 30px;
+            color: white;
+            text-shadow: 2px 2px black;
+            @include mobile{
+                overflow: hidden;
+            }
+        }
+
+
+        form{
+            width: 50%;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+                @include mobile{
+                  padding: 10px;
+                    width: 60%;
+                    height:80%;
+                }
+           
+            input{
+                width: 300px;
+                height: 30px;
+                font-size : 14px;
+                border-radius: 30px;
+
+
+                @include mobile {
+                    width: 200px;
+                    height: 20px;
+                    border-radius: 30px;
+                    padding: 5px;
+                   
+                    
+                 }
+            }
+
+            textarea{
+                text-align: bottom;
+                width: 300px;
+                height: 150px;
+                font-size: 14px;
+                border-radius: 10px;
+
+                
+                @include mobile {
+                    width: 200px;
+                    height: 100px;
+                    
+                 }
+            }
+            button{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 200px;
+                height: 30px;
+                font-size: 15px;
+                text-align: center;
+                color: white;
+                background-color: crimson;
+                border: none;
+                border-radius: 10px;
+                font-weight: 500;
+                cursor: pointer;
+                box-shadow: 0 2px 2px rgb(227, 49, 85) ;
+                
+                &:hover{
+                background-color: white;
+                color: black;
+                }
+                &:focus{
+                    outline: none;
+                }
+            }
+           
+
+            span{
+               color: green; 
+            }
+        }
+
+        
+    }
+}

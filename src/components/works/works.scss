@@ -1,0 +1,193 @@
+@import "../../global.scss";
+
+
+.work{
+   
+    font-size:50px;
+    
+    text-shadow: 1px 1px rgb(126, 124, 124);
+    overflow: hidden;
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+    position: relative;
+  
+    .arrow{
+    
+        height: 50px;
+        position: absolute;
+        cursor: pointer;
+        animation: arrowBlink 2s  linear infinite;
+        
+        @include mobile{
+            display: none;
+        }
+     
+
+        &.left{
+            left:100px;
+            transform: rotateY(180deg);  
+            overflow: hidden;
+          }
+
+          &.right{
+              right: 100px;
+              overflow: hidden;
+          }
+
+          
+    }
+
+    .slider{
+        height: 350px;
+        display: flex;
+        position:absolute;
+        left: 0;
+        transition: all 1s ease-in-out;
+        overflow: hidden;
+
+      @include mobile{
+       height: 100%;
+       flex-direction: column;
+       justify-content: space-around;
+   }
+
+        .container{
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+             
+            .item{
+              width: 700px;
+              height: 100%;
+              background-color: white;
+              border-radius: 20px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              overflow: hidden;
+            
+              @include mobile{
+              width: 60%;
+              height: 150px;
+              margin: 20px 0;
+            }
+
+
+              .left{
+                  flex: 4;
+                  height: 80%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  overflow: hidden;
+
+                  .leftContainer{
+                      width: 100%;
+                      height: 70%;
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: space-between;
+                      overflow: hidden;
+                      @include mobile{
+                        width: 100%;
+                        height: 100%;
+                       
+                      }
+
+
+                      .imgContainer{
+                         width: 50px;
+                         height: 50px;
+                         border-radius: 50%;
+                         background-color: rgb(254,179,155);
+                         display: flex;
+                         align-items: center;
+                         justify-content: center;
+                         overflow: hidden;
+
+                         @include mobile{
+                          width: 30px;
+                          height: 30px;
+                          }
+
+                          
+
+                         img{
+                             width: 25px;
+                             overflow: hidden;
+
+                             @include mobile{
+                                height:80%;
+                                width: 50%;
+                                }
+                         }
+
+                        
+
+                      }
+
+                     
+                      h2{
+                        font-family:'Courier New', Courier, monospace;
+                        font-size: 20px;
+                        overflow: hidden;
+
+                        @include mobile{
+                           font-size: 10px;
+                            }
+                      }
+                      p{
+                        font-family:'Courier New', Courier, monospace;
+                          font-size: 12px;
+                          overflow: hidden;
+
+                          @include mobile{
+                           display: none;
+                            }
+                      }
+                      span{
+                      
+                          cursor: pointer;
+                          overflow: hidden;
+                            @include mobile{
+                            height: 40%;
+                            width: 40%;
+                            }
+                         
+
+                      }
+                  }
+
+                 
+              }
+
+              .right{
+                  flex:8;
+                  height: 100%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  overflow: hidden;
+
+
+                  img{
+                      width: 600px;
+                      overflow: hidden;
+
+                      @include mobile{
+                        height: 140%;
+                        width: 140%;
+                      }
+                  }
+              }
+            }
+
+        }
+    }
+
+    
+
+}
